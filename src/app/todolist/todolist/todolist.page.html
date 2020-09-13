@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title >To-Do List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div>
+  <div>
+    <ion-item>
+      <ion-label style="text-align: center;align-items: center;"color="primary">Todo List</ion-label>
+      <ion-input placeholder="Yapılacaklar" #todoItem ></ion-input>
+      <ion-button (click)="ekle(todoItem.value);todoItem.value=''">ADD</ion-button>
+    </ion-item>
+  </div> 
+
+
+</div>
+<div style="width: 100%;height: 100%;background-color: black;">
+  <div *ngFor="let item of todo" style="color: bisque;">
+  <div class="list">
+    {{item.index+1}}){{item.icerik}}   <a (click)="icerikSil(item.index)"  onclick="alert('silindi')" class="close-button"></a>
+  </div>
+  </div>
+  <ion-button class="DBbutton" color="danger"
+  (click)="ekleDB()"
+   onclick="alert('veritabanına eklendi')" >
+   Veritabanına ekle</ion-button>
+</div>
+
+
+
+</ion-content>
+

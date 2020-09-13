@@ -1,0 +1,51 @@
+.DBbutton{
+    width: 30%;
+    height: 35px;
+    min-width: 180px;
+   
+}
+
+
+.close-button {
+	
+    height: 50px;
+    width: 50px;
+    position: relative;
+	box-sizing: border-box;
+	line-height: 50px;
+	display: inline-block;
+
+	&:before, &:after {
+		width: 50px;
+		height: 10px;
+		transform: rotate(-45deg);
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -10/2;
+		margin-left: -50/2;
+		display: block;
+		height: 10px;
+		width: 50px;
+		background-color:red;
+		transition: all 0.2s ease-out;
+	}
+
+	&:after {
+		transform: rotate(45deg);
+	}
+
+
+}
+
+  
+
+
+
+.list{
+    border-color:yellow;
+    border-width: thick;
+    border-style: groove;
+
+}

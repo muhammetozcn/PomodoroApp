@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">
+     Pomodoro App submodule
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<!--Burada kadar butonun header kısmı-->
+<ion-content>
+<div style="background-color: black; height: 100%;">
+    <div class="top" style="text-align: center;align-items: center;">
+      <ion-button (click)="bitir()">Pomodoro</ion-button>
+      <ion-button (click)="shortBreak()">Short Break</ion-button>
+      <ion-button (click)="longBreak()">Long Break</ion-button>
+    </div>
+  <div class="container">
+
+    <div   style="text-align: center;" class="zamanStyle ">
+            {{zaman}}      
+    </div>  
+    <div style="text-align: center;">
+      <ion-button (click)="basla()" class="butonStart">BAŞLAT</ion-button>
+      <ion-button (click)="durdur()" class="butonStart">DURDUR</ion-button>
+    </div>
+    <div style="text-align: center;">
+      <ion-button (click)="bitir()" class="butonFinish">SIFIRLA</ion-button>
+
+  <div style="color:white">Pomodoro Sayısı:{{Psayi}}</div>
+  <ion-button (click)="pomodoroPlus()" >Pomodoro Arttır</ion-button>
+  <ion-button (click)="pomodoroMinus()" >Pomodoro Azalt</ion-button>
+  <ion-button (click)="pomodoroDb()"  onclick="alert('veritabanına eklendi')">Veritabani Kaydet</ion-button>
+    </div>
+
+  </div>
+</div>
+
+
+</ion-content>
+<!--1. ioncontent tagı içerisine Zamanlayıcıyı ve butonu koyucaz-->
+
